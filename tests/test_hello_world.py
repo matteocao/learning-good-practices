@@ -7,4 +7,4 @@ def test_hello_world(capsys):
     """Correct name argument prints"""
     hello_world("Jill")
     captured = capsys.readouterr()
-    assert "Jall" in captured.out
+    assert "Jill" in captured.out
