@@ -1,6 +1,6 @@
 def hello_world(name):
     """
-    Print the name
+    Print `name` for greetings
     Args:
         name (str): your name
     Returns:
