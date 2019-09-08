@@ -14,8 +14,7 @@ Other pages
    :maxdepth: 2
 
    solver
-   README
-   functions/hello_world
+.. autofunction:: hello_world
 
 
 Indices and tables
