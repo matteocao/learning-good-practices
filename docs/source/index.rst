@@ -8,12 +8,13 @@ Configuration of Project Environment
 
 Blabla
 
-Overview on How to Run this API
-================================
-1. Either install a Python IDE or create a Python virtual environment to install the packages required
-2. Install packages required
-3. Install MySQL 5.7
-4. Install Postman extension in Chrome or install curl
+Other pages
+===========
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+    solver
 
 
 
