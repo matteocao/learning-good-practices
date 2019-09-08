@@ -8,8 +8,8 @@ Welcome to learning-good-practices's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
+   functions/hello_world
 
 
 Indices and tables
