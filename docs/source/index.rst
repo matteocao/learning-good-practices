@@ -14,6 +14,7 @@ Other pages
    :maxdepth: 2
 
    solver
+   README
    functions/hello_world
 
 
