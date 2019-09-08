@@ -1,4 +1,4 @@
-"""Tests for `hello_world` method."""
+"""Tests for `hello_world` method. Catch from capsys."""
 import pytest
 from functions import hello_world
 
