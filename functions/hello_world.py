@@ -6,4 +6,6 @@ def hello_world(name):
     Returns:
         None
     """
+    if not isinstance(name,str):
+        raise TypeError("The varaible 'name' is not a str")
     print("Hello " + name + ".")
