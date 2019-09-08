@@ -13,7 +13,7 @@ Other pages
 .. toctree::
    :maxdepth: 2
 
-   solver
+    solver
 
 
 
