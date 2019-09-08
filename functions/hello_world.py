@@ -6,4 +6,4 @@ def hello_world(name):
     Returns:
         None
     """
-    print("Hello {name}.")
+    print("Hello " + name + ".")
