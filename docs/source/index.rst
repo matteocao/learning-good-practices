@@ -12,9 +12,8 @@ Other pages
 ===========
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
-    solver
+   solver
 
 
 
