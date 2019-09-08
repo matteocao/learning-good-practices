@@ -28,7 +28,7 @@ Documentation for the Code
    :maxdepth: 2
    :caption: Contents:
 
-   functions
+    solver
 
 Indices and tables
 ==================
