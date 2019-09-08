@@ -34,7 +34,11 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.intersphinx',
     'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode',
+    'sphinx.ext.viewcode', 
+    'sphinx.ext.autosummary',
+    'numpydoc',
+    'sphinx.ext.linkcode', 
+    'sphinx.ext.doctest',
     'sphinx.ext.githubpages',
 ]
 

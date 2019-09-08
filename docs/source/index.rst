@@ -3,32 +3,20 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Configuration of Project Environment
-*************************************
+Welcome to the learning-good-practices repo!
+********************************************
 
-Blabla
+I have only prepared another couple of pages, mostly to try documentation out.
 
-Overview on How to Run this API
-================================
-1. Either install a Python IDE or create a Python virtual environment to install the packages required
-2. Install packages required
-3. Install MySQL 5.7
-4. Install Postman extension in Chrome or install curl
-
-
-
-Welcome to learning-good-practices's documentation!
-===================================================
-
-
-
-Documentation for the Code
-**************************
+Other pages
+===========
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
-    solver
+   solver
+   README
+   functions/hello_world
+
 
 Indices and tables
 ==================
