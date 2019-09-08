@@ -28,6 +28,7 @@ Documentation for the Code
    :maxdepth: 2
    :caption: Contents:
 
+   functions
 
 Indices and tables
 ==================
