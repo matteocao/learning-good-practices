@@ -10,7 +10,7 @@ License
    :maxdepth: 2
  
    solver
-
+   LICENSE
 
 User Documentation
 ==================
