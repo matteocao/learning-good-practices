@@ -6,7 +6,10 @@ I have only prepared another couple of pages, mostly to try documentation out.
 License
 =======
 
-.. solver
+.. toctree::
+   :maxdepth: 2
+ 
+   solver
 
 
 User Documentation
