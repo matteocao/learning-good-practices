@@ -5,8 +5,8 @@
 .. |Travis| image:: https://api.travis-ci.org/matteocao/learning-good-practices.svg?branch=master
 .. _Travis: https://travis-ci.org/matteocao/learning-good-practices
 
-.. |PyPi| image:: https://badge.fury.io/py/scikit-learn.svg
-.. _PyPi: https://badge.fury.io/py/scikit-learn
+.. |PyPi| image:: https://test.pypi.org/project/py-lgp/0.0.1/
+.. _PyPi: https://test.pypi.org/project/py-lgp/0.0.1/
 
 
 
