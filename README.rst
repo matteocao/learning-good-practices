@@ -19,7 +19,7 @@ The *documentation* can be found here: <https://learning-good-practices.readthed
 
 The *PyPI version* can be found here: <https://test.pypi.org/project/py-lgp/0.0.1/>.
 
-To update the PyPI version, first build it
+To update the *PyPI* version, first build it
 
 .. code-block:: python
 
