@@ -27,14 +27,3 @@ matrix:
       compiler: gcc
       sudo: required
       language: generic
-      install: 
-      - brew install python
-      - brew reinstall gcc
-      - virtualenv venv
-      - source venv/bin/activate
-      - pip install -r requirements_dev.txt --upgrade
-      - pip install -e .
-      script:
-      - pytest --cov=functions
-      after_success:
-      - coveralls
