@@ -13,6 +13,7 @@ Directives
    :maxdepth: 2
 
    solver
+   readme
 
 
 
