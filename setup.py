@@ -6,7 +6,7 @@ with open("README.rst", "r") as readme_file:
 requirements = ["ipython>=6", "nbformat>=4", "nbconvert>=5", "requests>=2"]
 
 setup(
-    name="functions",
+    name="py-lgp",
     version="0.0.1",
     author="Matteo Caorsi",
     author_email="matteocao@gmail.com",
