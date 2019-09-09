@@ -5,7 +5,7 @@
 .. |Travis| image:: https://api.travis-ci.org/matteocao/learning-good-practices.svg?branch=master
 .. _Travis: https://travis-ci.org/matteocao/learning-good-practices
 
-.. |PyPi| image:: https://test.pypi.org/project/py-lgp/
+.. |PyPi| image:: https://test.pypi.org/project/py-lgp/py-lgp.svg
 .. _PyPi: https://test.pypi.org/project/py-lgp/
 
 
