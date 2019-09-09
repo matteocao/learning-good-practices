@@ -6,8 +6,10 @@ I have only prepared another couple of pages, mostly to try documentation out.
 License
 =======
 
-.. include:: ../../LICENSE.rst
+.. toctree::
+   :maxdepth: 2
 
+   links
 
 User Documentation
 ==================
