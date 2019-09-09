@@ -18,6 +18,6 @@ To update the PyPI version, first build it
 
 And then upload it to PyPI:
 
-.. code-block:: python
+.. code-block:: bash
 
-   twine upload -\-repository-url https://test.pypi.org/legacy/ dist/*
+   twine upload --repository-url https://test.pypi.org/legacy/ dist/*
