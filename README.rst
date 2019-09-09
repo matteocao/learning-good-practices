@@ -1,6 +1,6 @@
 .. -*- mode: rst -*-
 
-|Travis|_ |Documentation|_ 
+|Travis|_ |Documentation|_
 
 .. |Travis| image:: https://api.travis-ci.org/matteocao/learning-good-practices.svg?branch=master
 .. _Travis: https://travis-ci.org/matteocao/learning-good-practices
@@ -17,13 +17,14 @@ This repo contains a simple, fully functional architecture of an hypothetical py
 
 The *documentation* can be found here: <https://learning-good-practices.readthedocs.io/en/latest/>
 
-The PyPI version can be found here: <https://test.pypi.org/project/py-lgp/0.0.1/>.
+The *PyPI version* can be found here: <https://test.pypi.org/project/py-lgp/0.0.1/>.
 
 To update the PyPI version, first build it
 
 .. code-block:: python
 
    python setup.py sdist bdist_wheel
+
 
 
 And then upload it to PyPI:
