@@ -1,7 +1,18 @@
+.. -*- mode: rst -*-
+
+|Travis|_ |PyPi|_ 
+
+.. |Travis| image:: https://api.travis-ci.org/matteocao/learning-good-practices.svg?branch=master
+.. _Travis: https://travis-ci.org/matteocao/learning-good-practices
+
+.. |PyPi| image:: https://badge.fury.io/py/scikit-learn.svg
+.. _PyPi: https://badge.fury.io/py/scikit-learn
+
+
+
 learning-good-practices
 =======================
 
-|PyPI| |Documentation Status| |Build Status| |Codecov| |Codacy branch grade| |license| 
 
 This repo contains a simple, fully functional architecture of an hypothetical python package. Useful for learning the basics.
 
