@@ -7,14 +7,14 @@ matrix:
       python: 3.7.2
     - os: osx
       osx_image: xcode9.4
-      python: 3.7
+      python: 3.7.2
 
 install:
   - pip install -r requirements_dev.txt
   - pip install -e .
-  
+
 script:
   - pytest --cov=functions
-  
+
 after_success:
   - coveralls
