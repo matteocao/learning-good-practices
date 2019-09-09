@@ -13,11 +13,11 @@ To update the PyPI version, first build it
 
 .. code-block:: python
 
-python setup.py sdist bdist_wheel
+   python setup.py sdist bdist_wheel
 
 
 And then upload it to PyPI:
 
 .. code-block:: python
 
-twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+   twine upload --repository-url https://test.pypi.org/legacy/ dist/*
