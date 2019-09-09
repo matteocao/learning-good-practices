@@ -7,9 +7,9 @@ License
 =======
 
 .. toctree::
- 
-   solver
-   LICENSE
+   :maxdepth: 2
+
+.. include:: ../../LICENSE.rst
 
 User Documentation
 ==================
