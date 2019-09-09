@@ -18,7 +18,7 @@ matrix:
       - pip install pytest
       - pip install coveralls
       - pip install pytest-cov
-      - pip install https://github.com/matteocao/learning-good-practices/archive/master.whl
+      - pip install https://github.com/matteocao/learning-good-practices/archive/master.zip
       script:
       - pytest --cov=functions
       after_success:
