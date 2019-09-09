@@ -14,7 +14,9 @@ matrix:
       - coveralls
     - os: osx
       language: minimal
-      install: pip3 install -e .
+      install: 
+      - pip install -r requirements_dev.txt
+      - pip install -e .
       script:
       - pytest --cov=functions
       after_success:
