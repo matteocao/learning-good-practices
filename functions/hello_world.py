@@ -7,6 +7,7 @@ it does trivial stuff
 def hello_world(name):
     """
     Print `name` and greetings
+    
     Args:
     -----
         name (str): your name
