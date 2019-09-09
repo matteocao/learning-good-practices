@@ -25,7 +25,14 @@ matrix:
     - os: osx
       language: minimal
       install: 
-      - pip install pytest
-      - pip install coveralls
-      - pip install pytest-cov
-
+      - brew update
+      - brew install python3
+      - brew reinstall gcc
+      - virtualenv venv
+      - source venv/bin/activate
+      - pip install -r requirements_dev.txt --upgrade
+      - pip install -e .
+      script:
+      - pytest --cov=functions
+      after_success:
+      - coveralls
