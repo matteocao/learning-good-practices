@@ -58,11 +58,10 @@ html_static_path = ['_static']
 # Run sphinx-apidoc to automatically generate documentation from docstring
 
 def run_apidoc(_):
-    modules = ['a_list_of',
-               'python_module_directories',
-               'in_your_project']
+    modules = ['functions',
+               'tests']
     for module in modules:
-        cur_dir = os.path.abspath(os.path.dirname(__file__))
+        cur_dir = '../../'
         output_path = os.path.join(cur_dir, module, 'doc')
         cmd_path = 'sphinx-apidoc'
         if hasattr(sys, 'real_prefix'):  # Check to see if we are in a virtualenv
