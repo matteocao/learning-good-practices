@@ -15,7 +15,9 @@ matrix:
     - os: osx
       language: minimal
       install: 
-      - pip install -r requirements_dev.txt
+      - pip install pytest
+      - pip install coveralls
+      - pip install pytest-cov
       - pip install -e .
       script:
       - pytest --cov=functions
