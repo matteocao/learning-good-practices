@@ -12,3 +12,13 @@ matrix:
       - pytest --cov=functions
       after_success:
       - coveralls
+    - os: osx
+	      language: minimal
+	      install: 
+	      - pip install pytest
+	      - pip install coveralls
+	      - pip install pytest-cov
+	      script:
+	      - pytest --cov=functions
+	      after_success:
+	      - coveralls 
