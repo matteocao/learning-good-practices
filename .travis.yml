@@ -15,6 +15,7 @@ matrix:
     - os: osx
       language: minimal
       install: pip3 install -e .
-
-install: pip install -e .
-script: pytest -r a -v
+      script:
+      - pytest --cov=functions
+      after_success:
+      - coveralls      
