@@ -59,4 +59,4 @@ html_static_path = ['_static']
 
 
 autoapi_type = 'python'
-autoapi_dirs = ['../../functions']
+autoapi_dirs = ['../../functions','../../tests']
