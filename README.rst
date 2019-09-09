@@ -1,10 +1,12 @@
 .. -*- mode: rst -*-
 
-|Travis|_ |PyPi|_ 
+|Travis|_ |Documentation|_ 
 
 .. |Travis| image:: https://api.travis-ci.org/matteocao/learning-good-practices.svg?branch=master
 .. _Travis: https://travis-ci.org/matteocao/learning-good-practices
 
+.. |Documentation| image:: https://readthedocs.org/projects/learning-good-practices/badge/?version=latest
+.. _Documentation: https://learning-good-practices.readthedocs.io/en/latest/
 
 
 learning-good-practices
