@@ -57,27 +57,3 @@ html_static_path = ['_static']
 
 # Run sphinx-apidoc to automatically generate documentation from docstring
 
-
-def run_apidoc(_):
-    argv = [
-        "-f",
-        "-T",
-        "-e",
-        "-M",
-        "-o", ".",
-        "..","../.."
-    ] 
-
-    try:
-        # Sphinx 1.7+
-        from sphinx.ext import apidoc
-        apidoc.main(argv)
-    except ImportError:
-        # Sphinx 1.6 (and earlier)
-        from sphinx import apidoc
-        argv.insert(0, apidoc.__file__)
-        apidoc.main(argv)
-
-
-def setup(app):
-    app.connect('builder-inited', run_apidoc)
