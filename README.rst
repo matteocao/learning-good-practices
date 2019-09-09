@@ -26,6 +26,7 @@ To update the PyPI version, first build it
    python setup.py sdist bdist_wheel
 
 
+
 And then upload it to PyPI:
 
 .. code-block:: bash
