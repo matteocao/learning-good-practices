@@ -14,6 +14,15 @@ jobs:
   - task: UsePythonVersion@0
     inputs:
       versionSpec: '$(python.version)'
+
+  - script: python -m pip install --upgrade pip setuptools
+    displayName: 'Install tools'
+
+  - script: pip install -r requirements_dev.txt
+    displayName: 'Install requirements'
+
+  - script: pytest
+    displayName: 'Test with pytest'
   
   # other options: 'macOS-10.13', 'vs2017-win2016'
   # Add additional tasks to run using each Python version in the matrix above
