@@ -1,6 +1,6 @@
 .. -*- mode: rst -*-
 
-|Travis|_ |Documentation|_ |Azure|_
+|Travis|_ |Documentation|_ |Azure|_ |binder|_
 
 .. |Travis| image:: https://api.travis-ci.org/matteocao/learning-good-practices.svg?branch=master
 .. _Travis: https://travis-ci.org/matteocao/learning-good-practices
@@ -11,13 +11,14 @@
 .. |Azure| image:: https://dev.azure.com/matteocaorsi/matteocao/_apis/build/status/matteocao.learning-good-practices?branchName=master
 .. _Azure: https://dev.azure.com/matteocaorsi/matteocao/_apis/build/status/matteocao.learning-good-practices
 
+.. |binder| image:: https://mybinder.org/badge_logo.svg
+.. _binder: https://mybinder.org/v2/gh/matteocao/learning-good-practices/master?filepath=examples%2Fsimple.ipynb
+
 
 Binder compatible
 =================
 
-The `requirements.txt` file specifies the dependencies needed for the example. Just click on the icon:
-.. image:: https://mybinder.org/badge_logo.svg
- :target: https://mybinder.org/v2/gh/matteocao/learning-good-practices/master?filepath=examples%2Fsimple.ipynb
+The `requirements.txt` file specifies the dependencies needed for the example. Just click on the binder icon or go to <https://mybinder.org/v2/gh/matteocao/learning-good-practices/master?filepath=examples%2Fsimple.ipynb>
 
 
 learning-good-practices
