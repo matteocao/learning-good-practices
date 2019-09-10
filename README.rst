@@ -1,12 +1,16 @@
 .. -*- mode: rst -*-
 
-|Travis|_ |Documentation|_
+|Travis|_ |Documentation|_ |Azure|_
 
 .. |Travis| image:: https://api.travis-ci.org/matteocao/learning-good-practices.svg?branch=master
 .. _Travis: https://travis-ci.org/matteocao/learning-good-practices
 
 .. |Documentation| image:: https://readthedocs.org/projects/learning-good-practices/badge/?version=latest
 .. _Documentation: https://learning-good-practices.readthedocs.io/en/latest/
+
+.. |Azure| image:: https://dev.azure.com/matteocaorsi/matteocao/_apis/build/status/matteocao.learning-good-practices?branchName=master
+.. _Azure: https://dev.azure.com/matteocaorsi/matteocao/_apis/build/status/matteocao.learning-good-practices
+
 
 Binder compatible
 =================
