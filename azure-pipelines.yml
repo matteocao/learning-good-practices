@@ -21,6 +21,9 @@ jobs:
   - script: pip install -r requirements_dev.txt
     displayName: 'Install requirements'
 
+  - script: pip install -e .
+    displayName: 'Install current environment'
+
   - script: pytest
     displayName: 'Test with pytest'
 
