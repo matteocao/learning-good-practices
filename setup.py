@@ -11,14 +11,15 @@ setup(
     author="Matteo Caorsi",
     author_email="matteocao@gmail.com",
     license="Apache License 2.0",
-    description="A package to learn to set up a git repo",
+    description="A package to learn to set up a git repo and CI/CD",
     long_description=readme,
-    long_description_content_type="text/markdown",
+    long_description_content_type="text/rst",
     url="https://github.com/matteocao/learning-good-practices",
     packages=find_packages(),
     install_requires=requirements,
     classifiers=[
-        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3",
         "License :: OSI Approved :: Apache Software License",
+	"Operating System :: OS Independent",
     ],
 )

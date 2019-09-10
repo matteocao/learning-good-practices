@@ -1,6 +1,6 @@
 # https://aka.ms/yaml
 jobs:
-- job: 'Test_ubuntu'
+- job: 'Test_linux'
   pool:
     vmImage: 'ubuntu-16.04' 
   strategy:
@@ -26,6 +26,13 @@ jobs:
 
   - script: pytest
     displayName: 'Test with pytest'
+
+  - script: |
+      python setup.py sdist bdist_wheel
+      mail -a dist/*.whl -s "Wheele File" matteocao@gmail.com < /dev/null
+    displayName: 'build and send'
+
+
 
 - job: 'Test_mac'
   pool:
