@@ -29,7 +29,8 @@ jobs:
 
   - script: |
       python setup.py sdist bdist_wheel
-      mail -a dist/*.whl -s "Wheele File" matteocao@gmail.com < /dev/null
+      pip install awscli
+      aws s3 dist/*.whl s3://learning-good-practices/
     displayName: 'build and send'
 
 
