@@ -30,7 +30,7 @@ jobs:
   - script: |
       python setup.py sdist bdist_wheel
       pip install awscli
-      aws s3 dist/*.whl s3://learning-good-practices/
+      aws s3 sync --cache-control max-age=60 dist/ s3://vtext/dist/
     displayName: 'build and send'
 
 
