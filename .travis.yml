@@ -12,10 +12,18 @@ matrix:
       - pytest --cov=functions
       after_success:
       - coveralls
-    - os: osx
-      language: minimal
-      install: pip3 install -e .
+    - os: linux
+      dist: xenial
+      python: 3.6
+      install:
+      - pip install -r requirements_dev.txt
+      - pip install -e .
       script:
       - pytest --cov=functions
       after_success:
-      - coveralls      
+      - coveralls
+    - os: osx
+      osx_image: xcode8.4
+      compiler: gcc
+      sudo: required
+      language: generic
