@@ -1,27 +1,18 @@
-# Adapted from the scikit-learn setup
+# https://aka.ms/yaml
 jobs:
-
-- template: ci/azure/posix.yml
-  parameters:
-    name: macOS
-    vmImage: xcode9-macos10.13
+- job: 'Test'
+  pool:
+    vmImage: 'ubuntu-16.04' 
+  strategy:
     matrix:
-      py37:
-        PYTHON_VERSION: '3.7'
-      py36:
-        PYTHON_VERSION: '3.6'
-      py35:
-        PYTHON_VERSION: '3.5'
+      Python36:
+        python.version: '3.6'
+      Python37:
+        python.version: '3.7'
 
+  steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '$(python.version)'
 
-- template: ci/azure/windows.yml
-  parameters:
-    name: Windows
-    vmImage: vs2017-win2016
-    matrix:
-      py37_64:
-        PYTHON_VERSION: '3.7'
-      py36_64:
-        PYTHON_VERSION: '3.6'
-      py35_64:
-        PYTHON_VERSION: '3.5'
+  # Add additional tasks to run using each Python version in the matrix above
