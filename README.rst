@@ -8,6 +8,15 @@
 .. |Documentation| image:: https://readthedocs.org/projects/learning-good-practices/badge/?version=latest
 .. _Documentation: https://learning-good-practices.readthedocs.io/en/latest/
 
+Binder compatible
+=================
+
+.. image:: https://mybinder.org/badge_logo.svg
+ :target: https://mybinder.org/v2/gh/matteocao/learning-good-practices/master?filepath=examples%2Fsimple.ipynb
+
+A Binder-compatible repo with a `requirements_dev.txt` file.
+
+Access this Binder at the following URL <https://mybinder.org/v2/gh/matteocao/learning-good-practices/master?filepath=examples%2Fsimple.ipynb>
 
 learning-good-practices
 =======================
