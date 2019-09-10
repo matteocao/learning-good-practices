@@ -2,13 +2,13 @@
 jobs:
 - job: 'Test'
   pool:
-    vmImage: 'ubuntu-16.04'
+    vmImage: 'ubuntu-16.04' 
   strategy:
     matrix:
-      Python37:
-        python.version: '3.7'
       Python36:
         python.version: '3.6'
+      Python37:
+        python.version: '3.7'
 
   steps:
   - task: UsePythonVersion@0
@@ -23,6 +23,6 @@ jobs:
 
   - script: pytest
     displayName: 'Test with pytest'
-  
+
   # other options: 'macOS-10.13', 'vs2017-win2016'
   # Add additional tasks to run using each Python version in the matrix above
