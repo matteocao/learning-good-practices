@@ -1,6 +1,6 @@
 """Tests for `hello_world` method. Catch from capsys."""
 import pytest
-from functions import addition
+import functions.addition
 
 
 def test_add():
