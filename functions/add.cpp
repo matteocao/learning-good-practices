@@ -8,7 +8,7 @@ int add(int i, int j) {
 
 namespace py = pybind11;
 
-PYBIND11_MODULE(adds, m) {
+PYBIND11_MODULE(add, m) {
     // optional module docstring
     m.doc() = "pybind11 example plugin";
     
