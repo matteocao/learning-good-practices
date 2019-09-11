@@ -2,7 +2,7 @@
 jobs:
 - job: 'Test_linux'
   pool:
-    vmImage: 'ubuntu-16.04' 
+    vmImage: 'ubuntu-16.04'
   strategy:
     matrix:
       Python36:
@@ -14,6 +14,12 @@ jobs:
   - task: UsePythonVersion@0
     inputs:
       versionSpec: '$(python.version)'
+
+  - script: |
+      mkdir build
+      cd build
+      cmake ..
+      cmake --build . --config Release --target check
 
   - script: python -m pip install --upgrade pip setuptools
     displayName: 'Install tools'
@@ -32,12 +38,15 @@ jobs:
       pip install awscli
       aws s3 sync dist/ s3://learning-good-practices/dist
     displayName: 'build and send'
+    env:
+       AWS_ACCESS_KEY_ID: $(AWS_ACCESS_KEY_ID)
+       AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY)
 
 
 
 - job: 'Test_mac'
   pool:
-    vmImage: 'macOS-10.13' 
+    vmImage: 'macOS-10.13'
   strategy:
     matrix:
       Python36:
