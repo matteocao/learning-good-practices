@@ -15,11 +15,8 @@ jobs:
     inputs:
       versionSpec: '$(python.version)'
 
-  - script: |
-      mkdir build
-      cd build
-      cmake ..
-      cmake --build . --config Release --target check
+  - script: cmake
+    displayName: 'building C++'
 
   - script: python -m pip install --upgrade pip setuptools
     displayName: 'Install tools'
