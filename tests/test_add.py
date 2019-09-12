@@ -1,6 +1,6 @@
 """Tests for `hello_world` method. Catch from capsys."""
 import pytest
-import functions #this name is inside PYBIND11_MODULE()
+import addition #this name is inside PYBIND11_MODULE()
 
 
 def test_add():
