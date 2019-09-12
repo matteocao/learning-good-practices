@@ -9,7 +9,7 @@
 .. _Documentation: https://learning-good-practices.readthedocs.io/en/latest/
 
 .. |Azure| image:: https://dev.azure.com/matteocaorsi/matteocao/_apis/build/status/matteocao.learning-good-practices?branchName=master
-.. _Azure: https://dev.azure.com/matteocaorsi/matteocao/_apis/build/status/matteocao.learning-good-practices
+.. _Azure: https://dev.azure.com/matteocaorsi/matteocao/
 
 .. |binder| image:: https://mybinder.org/badge_logo.svg
 .. _binder: https://mybinder.org/v2/gh/matteocao/learning-good-practices/master?filepath=examples%2Fsimple.ipynb
