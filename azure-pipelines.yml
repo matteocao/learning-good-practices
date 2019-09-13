@@ -36,7 +36,7 @@ jobs:
   - script: |
       python setup.py sdist bdist_wheel
       pip install awscli
-      aws s3 sync dist/ s3://learning-good-practices/dist
+      aws s3 sync dist/ s3://py-lgp/dist
     displayName: 'build and send'
     env:
        AWS_ACCESS_KEY_ID: $(AWS_ACCESS_KEY_ID)
@@ -77,6 +77,15 @@ jobs:
   - script: pytest tests/
     displayName: 'Test with pytest'
 
-
+  - script: |
+      python setup.py sdist bdist_wheel
+      pip install awscli
+      aws s3 sync dist/ s3://py-lgp/dist
+    displayName: 'build and send'
+    env:
+       AWS_ACCESS_KEY_ID: $(AWS_ACCESS_KEY_ID)
+       AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY)
+       
+       
   # other options: 'macOS-10.13', 'vs2017-win2016'
   # Add additional tasks to run using each Python version in the matrix above
