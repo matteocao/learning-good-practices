@@ -74,7 +74,7 @@ jobs:
   - script: python scripts/add_script.py
     displayName: 'Try run script'
 
-  - script: pytest
+  - script: pytest tests/
     displayName: 'Test with pytest'
 
 
