@@ -1,4 +1,4 @@
-"""Tests for `hello_world` method. Catch from capsys."""
+"""Tests for `addition.add` method. Catch from capsys."""
 import pytest
 import addition #the name is inside PYBIND11_MODULE()
 
