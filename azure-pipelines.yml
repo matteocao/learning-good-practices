@@ -27,7 +27,10 @@ jobs:
   - script: pip install -e .
     displayName: 'Install current environment'
 
-  - script: pytest
+  - script: python scripts/add_script.py
+    displayName: 'Try run script'
+
+  - script: pytest tests/
     displayName: 'Test with pytest'
 
   - script: |
@@ -56,6 +59,9 @@ jobs:
     inputs:
       versionSpec: '$(python.version)'
 
+  - script: cmake .
+    displayName: 'building C++'
+
   - script: python -m pip install --upgrade pip setuptools
     displayName: 'Install tools'
 
@@ -65,7 +71,10 @@ jobs:
   - script: pip install -e .
     displayName: 'Install current environment'
 
-  - script: pytest
+  - script: python scripts/add_script.py
+    displayName: 'Try run script'
+
+  - script: pytest tests/
     displayName: 'Test with pytest'
 
 
