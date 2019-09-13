@@ -71,6 +71,9 @@ jobs:
   - script: pip install -e .
     displayName: 'Install current environment'
 
+  - script: python scripts/add_script.py
+    displayName: 'Try run script'
+
   - script: pytest
     displayName: 'Test with pytest'
 
