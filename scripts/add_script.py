@@ -1,4 +1,4 @@
-from functions import main
+import functions
 
 for i in range(5):
-    print(main.addition(i,i))
+    print(addition.add(i,i))
