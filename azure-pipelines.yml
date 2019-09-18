@@ -36,17 +36,14 @@ jobs:
   - script: python setup.py sdist bdist_wheel
     displayName: 'build the wheel'
 
-# Download build artifacts
-# Download files that were saved as artifacts of a completed build
-  - task: DownloadBuildArtifacts@0
+# Publish build artifacts
+# Publish build artifacts to Azure Pipelines or a Windows file share
+  - task: PublishBuildArtifacts@1
     inputs:
-      buildType: 'current'
-      buildVersionToDownload: 'latest' # Required when buildType == Specific. Options: latest, latestFromBranch, specific
-      downloadType: 'specific' # Choose whether to download a single artifact or all artifacts of a specific build. Options: single, specific
-      downloadPath: '$(System.ArtifactsDirectory)' 
-      parallelizationLimit: '8' # Optional
-      # pip install awscli
-      # aws s3 sync dist/ s3://py-lgp/dist
+      pathtoPublish: dist/*
+      artifactName: 'drop.whl' 
+      publishLocation: 'filePath'
+      targetPath: 192.168.1.130 # Required when publishLocation == FilePath
     displayName: 'download'
     # env:
      #  AWS_ACCESS_KEY_ID: $(AWS_ACCESS_KEY_ID)
@@ -87,7 +84,14 @@ jobs:
   - script: pytest tests/
     displayName: 'Test with pytest'
 
-       
+  #   - script: |
+  #    python setup.py sdist bdist_wheel
+  #    pip install awscli
+  #    aws s3 sync dist/ s3://py-lgp/dist
+  #  displayName: 'build and send'
+  #  env:
+  #     AWS_ACCESS_KEY_ID: $(AWS_ACCESS_KEY_ID)
+  #     AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY)     
        
   # other options: 'macOS-10.13', 'vs2017-win2016'
   # Add additional tasks to run using each Python version in the matrix above
