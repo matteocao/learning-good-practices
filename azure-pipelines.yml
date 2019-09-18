@@ -33,9 +33,11 @@ jobs:
   - script: pytest tests/
     displayName: 'Test with pytest'
 
+  - script: python setup.py sdist bdist_wheel
+    displayName: 'build the wheel'
+
   - script: |
-      python setup.py sdist bdist_wheel
-      drive --remote login
+      drive --remote login --help
       drive add_remote dist/
     displayName: 'build the wheel and download'
 
@@ -74,7 +76,7 @@ jobs:
   - script: pytest tests/
     displayName: 'Test with pytest'
 
-  #   - script: |
+  #  - script: |
   #    python setup.py sdist bdist_wheel
   #    pip install awscli
   #    aws s3 sync dist/ s3://py-lgp/dist
