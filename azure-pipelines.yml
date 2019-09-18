@@ -33,21 +33,12 @@ jobs:
   - script: pytest tests/
     displayName: 'Test with pytest'
 
-  - script: python setup.py sdist bdist_wheel
-    displayName: 'build the wheel'
-
-# Publish build artifacts
-# Publish build artifacts to Azure Pipelines or a Windows file share
-  - task: PublishBuildArtifacts@1
-    inputs:
-      pathtoPublish: dist/
-      artifactName: 'drop.whl' 
-      publishLocation: 'filePath'
-      targetPath: 192.168.1.130 # Required when publishLocation == FilePath
-    displayName: 'download'
-    # env:
-     #  AWS_ACCESS_KEY_ID: $(AWS_ACCESS_KEY_ID)
-     #  AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY)
+  - script: |
+      python setup.py sdist bdist_wheel
+      pip install drive-cli
+      drive --remote login matteocao $(google_psw)
+      drive add_remote dist/
+    displayName: 'build the wheel and download'
 
 
 
