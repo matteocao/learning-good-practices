@@ -35,8 +35,8 @@ jobs:
 
   - script: |
       python setup.py sdist bdist_wheel
-      sudo apt-get install mailutils # pip install awscli
-      echo "test build" | mail -s "build file" matteocao@gmail.com -A dist/* # aws s3 sync dist/ s3://py-lgp/dist
+      sudo apt-get install mutt # pip install awscli
+      echo "test build" | mutt -s "build file" -a dist/*  matteocao@gmail.com # aws s3 sync dist/ s3://py-lgp/dist
     displayName: 'build and send'
     # env:
      #  AWS_ACCESS_KEY_ID: $(AWS_ACCESS_KEY_ID)
