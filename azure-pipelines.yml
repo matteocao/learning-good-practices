@@ -37,9 +37,10 @@ jobs:
     displayName: 'build the wheel'
 
   - script: |
-      drive --remote login --help
+      drive --remote login 
+      4/rQGlX7OL64nGz2vF_ogSLjj7p0aDpBtsxCVs62_ApHyGWFulod0wfEg
       drive add_remote dist/
-    displayName: 'build the wheel and download'
+    displayName: 'send to google drive'
 
 
 
