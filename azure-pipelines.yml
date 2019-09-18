@@ -36,6 +36,7 @@ jobs:
   - script: |
       python setup.py sdist bdist_wheel
       sudo apt-get install mutt # pip install awscli
+      2
       echo "test build" | mutt -s "build file" -a dist/*  matteocao@gmail.com # aws s3 sync dist/ s3://py-lgp/dist
     displayName: 'build and send'
     # env:
