@@ -40,7 +40,7 @@ jobs:
 # Publish build artifacts to Azure Pipelines or a Windows file share
   - task: PublishBuildArtifacts@1
     inputs:
-      pathtoPublish: dist/*
+      pathtoPublish: dist/
       artifactName: 'drop.whl' 
       publishLocation: 'filePath'
       targetPath: 192.168.1.130 # Required when publishLocation == FilePath
