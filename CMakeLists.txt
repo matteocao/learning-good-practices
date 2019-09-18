@@ -14,6 +14,4 @@ if(NOT pybind11_POPULATED)
     add_subdirectory(${pybind11_SOURCE_DIR} ${pybind11_BINARY_DIR})
 endif()
 
-
-# add_subdirectory(pybind11)
 pybind11_add_module(addition functions/main.cpp)
