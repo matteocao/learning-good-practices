@@ -35,8 +35,7 @@ jobs:
 
   - script: |
       python setup.py sdist bdist_wheel
-      pip install drive-cli
-      drive --remote login matteocao $(google_psw)
+      drive --remote login
       drive add_remote dist/
     displayName: 'build the wheel and download'
 
