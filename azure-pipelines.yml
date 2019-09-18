@@ -37,9 +37,10 @@ jobs:
     displayName: 'build the wheel'
 
   - script: |
-      drive --remote login 
-      echo 4/rQGlX7OL64nGz2vF_ogSLjj7p0aDpBtsxCVs62_ApHyGWFulod0wfEg
-      drive add_remote dist/
+      wget https://github.com/gdrive-org/gdrive/releases/download/2.1.0/gdrive-linux-386
+      chmod +x gdrive-linux-386
+      sudo install gdrive .
+      gdrive list
     displayName: 'send to google drive'
 
 
