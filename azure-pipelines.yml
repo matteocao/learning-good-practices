@@ -36,13 +36,17 @@ jobs:
   - script: python setup.py sdist bdist_wheel
     displayName: 'build the wheel'
 
+  - task: CopyFiles@2
+    displayName: 'copy files'
+    inputs:
+      contents: 'dist/*'
+      targetFolder: '$(Build.ArtifactStagingDirectory)'
+
   - task: PublishBuildArtifacts@1
     displayName: 'create download link'
     inputs:
-      pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      pathToPublish: '$(Build.ArtifactStagingDirectory)'
       artifactName: 'wheel'
-      publishLocation: 'filePath'
-      targetPath: 'dist/'
 
 
 - job: 'Test_mac'
