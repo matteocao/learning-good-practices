@@ -36,10 +36,13 @@ jobs:
   - script: python setup.py sdist bdist_wheel
     displayName: 'build the wheel'
 
-  - script: |
-      scp dist/* matteocairsi@192.168.1.130:C:/Download/
-    displayName: 'send to me'
-
+  - task: PublishBuildArtifacts@1
+    displayName: 'create download link'
+    inputs:
+      pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      artifactName: 'wheel'
+      publishLocation: 'filePath'
+      targetPath: 'dist/'
 
 
 - job: 'Test_mac'
