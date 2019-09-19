@@ -47,6 +47,13 @@ jobs:
     inputs:
       pathToPublish: '$(Build.ArtifactStagingDirectory)'
       artifactName: 'wheel'
+  
+  - task: DownloadBuildArtifacts@0
+    inputs:
+      buildType: 'current'
+      downloadType: 'single'
+      artifactName: 'wheel'
+      downloadPath: '$(System.ArtifactsDirectory)'
 
 
 - job: 'Test_mac'
