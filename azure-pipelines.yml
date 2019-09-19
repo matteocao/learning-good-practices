@@ -47,13 +47,6 @@ jobs:
     inputs:
       pathToPublish: '$(Build.ArtifactStagingDirectory)'
       artifactName: 'wheel'
-  
-  - task: DownloadBuildArtifacts@0
-    inputs:
-      buildType: 'current'
-      downloadType: 'single'
-      artifactName: 'wheel'
-      downloadPath: '$(System.ArtifactsDirectory)'
 
 
 - job: 'Test_mac'
@@ -89,14 +82,20 @@ jobs:
   - script: pytest tests/
     displayName: 'Test with pytest'
 
-  #  - script: |
-  #    python setup.py sdist bdist_wheel
-  #    pip install awscli
-  #    aws s3 sync dist/ s3://py-lgp/dist
-  #  displayName: 'build and send'
-  #  env:
-  #     AWS_ACCESS_KEY_ID: $(AWS_ACCESS_KEY_ID)
-  #     AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY)     
+  - script: python setup.py sdist bdist_wheel
+    displayName: 'build the wheel'
+
+  - task: CopyFiles@2
+    displayName: 'copy files'
+    inputs:
+      contents: 'dist/*'
+      targetFolder: '$(Build.ArtifactStagingDirectory)'
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'create download link in summary'
+    inputs:
+      pathToPublish: '$(Build.ArtifactStagingDirectory)'
+      artifactName: 'wheel'
        
   # other options: 'macOS-10.13', 'vs2017-win2016'
   # Add additional tasks to run using each Python version in the matrix above
