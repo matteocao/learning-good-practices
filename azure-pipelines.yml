@@ -15,7 +15,7 @@ jobs:
     inputs:
       versionSpec: '$(python.version)'
 
-  - script: cmake .
+  - script: cmake . 
     displayName: 'building C++'
 
   - script: python -m pip install --upgrade pip setuptools
@@ -114,7 +114,7 @@ jobs:
       versionSpec: '$(python.version)'
 
 
-  - script: cmake .
+  - script: cmake . -G "Visual Studio 17 2016 Win64"
     displayName: 'building C++'
 
   - script: python -m pip install --upgrade pip setuptools
