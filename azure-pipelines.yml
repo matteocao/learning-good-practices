@@ -148,5 +148,58 @@ jobs:
       artifactName: 'wheel'
        
 
+
+
+- job: 'Test_win_32'
+  pool:
+    vmImage: 'vs2017-win2016'
+  strategy:
+    matrix:
+      Python36:
+        python.version: '3.6'
+      Python37:
+        python.version: '3.7'
+
+  steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '$(python.version)'
+      architecture: 'x86'
+
+  - script: cmake .
+    displayName: 'building C++'
+
+  - script: python -m pip install --upgrade pip setuptools
+    displayName: 'Install tools'
+
+  - script: pip install -r requirements_dev.txt
+    displayName: 'Install requirements'
+
+  - script: pip install -e .
+    displayName: 'Install current environment'
+
+  - script: python scripts/add_script.py
+    displayName: 'Try run script'
+
+  - script: pytest tests/
+    displayName: 'Test with pytest'
+
+  - script: python setup.py sdist bdist_wheel
+    displayName: 'build the wheel'
+
+  - task: CopyFiles@2
+    displayName: 'copy files'
+    inputs:
+      contents: 'dist/*'
+      targetFolder: '$(Build.ArtifactStagingDirectory)'
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'create download link in summary'
+    inputs:
+      pathToPublish: '$(Build.ArtifactStagingDirectory)'
+      artifactName: 'wheel'
+
+
+
   # other options: 'macOS-10.13', 'vs2017-win2016'
   # Add additional tasks to run using each Python version in the matrix above
