@@ -9,5 +9,5 @@ sphinx==2.2.0
 numpydoc==0.9.1
 sphinx-autoapi==1.1.0
 pybind11==2.3.0
-numpy==1.17.2
+numpy==1.19.5
 drive-cli==2.0.0
