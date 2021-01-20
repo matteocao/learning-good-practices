@@ -3,7 +3,7 @@ wheel==0.33.6
 twine==1.15.0
 pytest==5.1.2
 black==19.3b0
-pytest-cov==2.7.1
+pytest-cov==2.11.1
 coveralls==1.8.2
 sphinx==2.2.0
 numpydoc==0.9.1
